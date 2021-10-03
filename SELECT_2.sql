@@ -3,10 +3,10 @@ join musiciangenre mg on g.id = mg.genreid
 group by title
 
 
-select a.title, count(t.id) from track t 
+select count(*) from track t 
 left join album a on t.albumid = a.id 
 where a.release between 2019 and 2020
-group by a.title
+
 
 
 select a.title, AVG(t.duration) from track t 
